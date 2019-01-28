@@ -6,6 +6,8 @@ import { adapterFactory } from 'angular-calendar/date-adapters/date-fns';
 import { AppComponent } from './app.component';
 import { FullCalendarModule } from 'ng-fullcalendar';
 
+import { EventService } from './event.service';
+
 @NgModule({
   declarations: [
     AppComponent
@@ -19,7 +21,7 @@ import { FullCalendarModule } from 'ng-fullcalendar';
       useFactory: adapterFactory
     })
   ],
-  providers: [],
+  providers: [ EventService ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
